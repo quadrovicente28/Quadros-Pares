@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUADROS</title>
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"
+        defer></script>
+    <!-- bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <!-- mapbox -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.css' rel='stylesheet' />
+    <!-- in house CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/map.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="icon" href="./asset/icon.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="address-bar">
+        G/F, Main Mall, Seaside Blvd, 123, Pasay, Philippines 1300
+    </div>
+    </div>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top p-0">
+        <div class="container">
+            <a class="navbar-brand" href="./index.html"><img src="./asset/home.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+                aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#about-us">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#menu">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#order-page">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#location">Location & Hours</a>
+                    </li>
+                </ul>
+            </div>
+            <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions"
+                aria-controls="offcanvasWithBothOptions"><i class="bi bi-cart3 btn-icon"></i></button>
+
+        </div>
+    </nav>
+    <div id="banner">
+        <video autoplay muted loop id="myVideo">
+            <source src="./asset/KapitanPares.mp4" type="video/mp4">
+        </video>
+        <div class="brand">
+            <div class="brand-logo">Quadros Pares</div>
+            <div class="scroller">
+                <span>
+                    Perfect<br />
+                    Aromatic<br />
+                    Redolent<br />
+                    Exquisite<br />
+                    Seasoned
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="section" id="about-us">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-lg-6 col-sm-10">
+                    <div class="section-title">For the love of pares<br>_</div>
+                    <!-- <h1>For the love of pares <br>_</h1> -->
+                    <p>Our signature dish, beef pares, is a slow-cooked beef stew made with tender cuts of beef, spices,
+                        and soy sauce. </p>
+                    <p> We take pride in using only the freshest ingredients to bring the rich flavors of the
+                        Philippines to your plate. We invite you to come and try our delicious beef pares and other
+                        traditional Filipino dishes.</p>
+                </div>
+                <div class="col-lg-5 col-sm-10">
+                    <div class="img-container-circle">
+                        <img src="./asset/handBowl.jpg" alt="ang sarap ng Pares">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section" id="menu">
+        <div class="container">
+            <div id="menulist">
+                <div class="menu-logo"><img src="./asset/logo1.png" alt=""></div>
+            </div>
+        </div>
+    </div>
+    <div class="section" id="order-page">
+        <div class="container">
+            <div class="maintext row">
+                <h2>Your daily dose of "Hugot"</h2>
+            </div>
+            <br>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-5 batch-one">
+                <div class="col" onclick="currentSlide(1)">
+                    <img src="./asset/menupictures/pares-meme.jpg" class="img-thumbnail" alt="...">
+                </div>
+                <div class="col" onclick="currentSlide(2)">
+                    <img src="./asset/menupictures/bonemarrow-meme.jpg" class="img-thumbnail" alt="...">
+                </div>
+                <div class="col" onclick="currentSlide(3)">
+                    <img src="./asset/menupictures/lines-sa-pagkain.jpg" class="img-thumbnail" alt="...">
+                </div>
+                <div class="col" onclick="currentSlide(4)">
+                    <img src="./asset/menupictures/rice-meme.jpg" class="img-thumbnail" alt="...">
+                </div>
+            </div>
+            <br><br>
+            <div class="text row">
+                <h2>"Great Food Comes Great Responsibility"</h2>
+            </div>
+            <br>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-5 batch-two">
+                <div clas="col" onclick="currentSlide(5)">
+                    <img src="./asset/handBowl.jpg" class="img-thumbnail" alt="...">
+                </div>
+                <div clas="col" onclick="currentSlide(6)">
+                    <img src="./asset/smoky.jpg" class="img-thumbnail" alt="...">
+                </div>
+                <div clas="col" onclick="currentSlide(7)">
+                    <img src="./asset/spoonful.jpg" class="img-thumbnail" alt="...">
+                </div>
+                <div clas="col" onclick="currentSlide(8)">
+                    <img src="./asset/menupictures/garlicfr.jpg" class="img-thumbnail" alt="...">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section" id="location">
+        <div id='map'></div>
+        <div id="map-menu">
+            <!-- See a list of Mapbox-hosted public styles at -->
+            <!-- https://docs.mapbox.com/api/maps/styles/#mapbox-styles -->
+            <div class="map-radio">
+                <input id="streets-v12" type="radio" name="rtoggle" value="satellite">
+                <label for="streets-v12">Street Map</label>
+            </div>
+            <div class="map-radio">
+                <input id="satellite-streets-v12" type="radio" name="rtoggle" value="satellite">
+                <label for="satellite-streets-v12">Satellite</label>
+            </div>
+            <div class="map-radio">
+                <input id="light-v11" type="radio" name="rtoggle" value="light">
+                <label for="light-v11">Light</label>
+            </div>
+            <div class="map-radio">
+                <input id="dark-v11" type="radio" name="rtoggle" value="dark">
+                <label for="dark-v11">Dark</label>
+            </div>
+        </div>
+        <div class="location-card">
+            <div class="title">
+                Our Location
+            </div>
+            <div class="store-address">
+                G/F, Main Mall,<br>
+                Seaside Blvd,
+                123, Pasay, 1300 <br>
+                Metro Manila
+            </div>
+            <div class="store-hours">
+                <h6>Open Hours:</h6>
+                Mon-Fri 10AM-6PM <br>
+                Sat-Sun 10AM-5PM
+            </div>
+        </div>
+    </div>
+    <div class="section contact-form">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="form-left col-lg-6 col-sm-12">
+                    <h3 class="section-title">Message Us<br>_</h3>
+                    <p>Have any questions? Reach out and we'll do our best!</p>
+                    <p>Use the form for general inquiries. For business inquiries please email: business@redarcade.com
+                    </p>
+                </div>
+                <div class="form-right col-lg-5 col-sm-12">
+                    <form id="message-form">
+                        <div class="mb-3 mt-5">
+                            <label for="email" class="form-label">Email address:</label>
+                            <input type="text" class="form-control" id="email">
+                            <small id="emailError"></small>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message:</label>
+                            <textarea class="form-control" id="message" rows="3"></textarea>
+                            <small id="messageError"></small>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- The follwing Html is for modals -->
+    <!-- Modal for gallery -->
+    <div class="gallerymodal" id="lightbox">
+        <div class="gallerymodal-content">
+            <span type="button" class="gallerymodal_close">&times;</span>
+            <div class="mySlides">
+                <img src="./asset/menupictures/pares-meme.jpg" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <img src="./asset/menupictures/bonemarrow-meme.jpg" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <img src="./asset/menupictures/lines-sa-pagkain.jpg" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <img src="./asset/menupictures/rice-meme.jpg" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <img src="./asset/handBowl.jpg" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <img src="./asset/smoky.jpg" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <img src="./asset/spoonful.jpg" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <img src="./asset/menupictures/garlicfr.jpg" style="width:100%">
+            </div>
+            <!-- Next/previous controls -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+    </div>
+
+    <!-- Modal for individual menu -->
+    <div id="modalmenu" class="menu_modal">
+        <div class="menu_modal-content">
+            <div class="modal-img">
+                <span class="menu_modal_close">&times;</span>
+            </div>
+            <div class="menu_modal-body">
+                <div class="modal-menu-name"></div>
+                <div class="modal-menu-desc"></div>
+                <div class="form-floating mb-2 mt-2">
+                    <textarea class="form-control" id="modal-note" style="height: 100px"></textarea>
+                    <label for="modal-note">Special Instruction</label>
+                </div>
+            </div>
+            <div class="menu_modal-footer">
+                <div class="row justify-content-between align-items-center mb-2">
+                    <div class="col-5">
+                        <div class="input-group">
+                            <button class="btn btn-outline-secondary" type="button" onclick="qty_decr()">-</button>
+                            <input type="text" class="form-control" id="modal_menu_qty" value="1">
+                            <button class="btn btn-outline-secondary" type="button" onclick="qty_incr()">+</button>
+                        </div>
+                    </div>
+                    <div class="col-5 d-flex align-items-center justify-content-end">
+                        <div class="price" id="modal_menu_price"></div>
+                    </div>
+                </div>
+                <button class="btn-modal-footer">Add to cart</button>
+            </div>
+        </div>
+    </div>
+    <div class="offcanvas offcanvas-end bg-dark text-white" data-bs-scroll="true" tabindex="-1"
+        id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Your Pickup Order</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body body-of-canvas">
+            <div class="output-order">
+                <!-- output order -->
+            </div>
+            <div class="output-totalprice">
+                <!-- output price -->
+            </div>
+            <div class="empty-btn-div">
+                <button class="empty-btn">EMPTY CART</button>
+            </div>
+            <div class="checkout-btn-div d-flex justify-content-center">
+                <button type="submit" class="checkout-btn"><a href="./checkoutpage.html">CHECKOUT</a></button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="address-bar">
+            <div class="container">
+                All rights reserved 2023
+            </div>
+        </div>
+    </footer>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("V8EfZO3s-Ec13WYAk");
+        })();
+    </script>
+    <script src="js/index.js"></script>
+    <script src="./js/validation.js"></script>
+    <script src="./js/map.js"></script>
+</body>
+
+</html>

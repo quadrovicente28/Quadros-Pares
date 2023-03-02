@@ -1,0 +1,98 @@
+
+#location {
+    /* background-color: #303642; */
+    /* clip-path: polygon(0 7vw, 100% 0, 100% 100%, 0 100%);  */
+    /* background-image:url(./asset/smoky.jpg);
+    background-size: cover; */
+    min-height: unset;
+    height: 50vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+#map {
+  /* position: absolute;
+  top: 0;
+  bottom: 0; */
+  width: 100%;
+  height: 100%;
+}
+
+#map-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background: #353535;
+  /* padding: 10px; */
+  font-family: 'Open Sans', sans-serif;
+  display: flex;
+  }
+
+.map-radio{
+  position: relative;
+  padding: 0;
+}
+.map-radio>label{
+  font-size: 15px;
+  padding: 2px 10px;
+  width: 100%;
+  border: solid 1px #AB3903;
+}
+
+.map-radio>input[type="radio"]{
+  position: absolute;
+  clip: rect(0,0,0,0);
+  pointer-events: none;
+}
+
+.map-radio>input[type="radio"]:checked~label{
+  background-color: #AB3903;
+  border: solid 1px #AB3903;
+  color: white;
+  font-weight: bold;
+}
+
+.location-card{
+    background-color: #ffffff;
+    color: inherit;
+    padding: 30px 100px;
+    position: absolute;
+    top: 50%;
+    left: 4vw;
+    transform: translateY(-50%);
+    color: rgb(42, 41, 41);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.location-card .title{
+    font-size: 35px;
+    font-family: 'Sriracha', cursive;
+    margin-bottom: 10px;
+}
+
+.location-card .store-address{
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.location-card .store-hours{
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    font-size: 14px;
+}
+
+.location-card .store-hours h6{
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
